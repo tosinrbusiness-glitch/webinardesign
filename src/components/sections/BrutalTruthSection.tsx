@@ -25,7 +25,7 @@ const BrutalTruthSection = () => {
             <span className="text-foreground">THAN RENTERS.</span>
           </h2>
           <p className={`text-lg sm:text-xl text-[#9a8cb0] max-w-2xl mx-auto leading-relaxed transition-all duration-700 delay-200 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-            Black residents make up <span className="font-bold text-foreground">~40% of Philadelphia</span> — but most are still renting. That gap only grows if you sit still.
+            Black residents make up <span className="font-bold text-foreground">~50% of Philadelphia</span> — but most are still renting. That gap only grows if you sit still.
           </p>
         </div>
 
