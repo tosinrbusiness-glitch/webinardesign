@@ -56,7 +56,7 @@ const VideoSection = () => {
                     Success Story: $14K Grant Closing
                   </span>
                 </div>
-                <span className="text-xs sm:text-sm text-[#9a8cb0] font-heading">04:12</span>
+                
               </div>
             </div>
           </div>
