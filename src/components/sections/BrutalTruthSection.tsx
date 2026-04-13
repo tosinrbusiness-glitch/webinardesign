@@ -15,7 +15,7 @@ const BrutalTruthSection = () => {
 
       <div className="relative z-10 container mx-auto px-4 sm:px-6">
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <div className={`inline-flex items-center gap-2 bg-destructive/10 border border-destructive/25 rounded-full px-5 py-2 mb-8 transition-all duration-700 ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"}`}>
+          <div className={`inline-flex items-center gap-2 bg-destructive/10 border border-destructive/25 rounded-full px-5 py-2 mb-8 animate-badge-glow transition-all duration-700 ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"}`}>
             <AlertTriangle className="w-4 h-4 text-destructive" />
             <span className="text-destructive text-xs font-bold tracking-[0.2em] uppercase font-heading">The Wealth Gap Is Real</span>
           </div>

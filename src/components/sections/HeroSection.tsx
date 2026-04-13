@@ -24,7 +24,7 @@ const HeroSection = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 items-center pt-8 pb-20 lg:pt-12 lg:pb-32">
           <div className="space-y-8 animate-slide-in-left">
-            <div className="inline-flex items-center gap-2 bg-destructive/15 border border-destructive/30 rounded-full px-4 py-1.5">
+            <div className="inline-flex items-center gap-2 bg-destructive/15 border border-destructive/30 rounded-full px-4 py-1.5 animate-badge-glow">
               <span className="w-2 h-2 rounded-full bg-destructive animate-pulse" />
               <span className="text-destructive text-xs font-bold tracking-wider uppercase font-heading">🚨 Limited Spots — Register Now</span>
             </div>
