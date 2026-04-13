@@ -39,8 +39,8 @@ const FinalCTASection = () => {
         {/* Scarcity */}
         <div className={`inline-flex items-center gap-3 bg-muted/50 border border-border rounded-full px-6 py-3 mb-6 transition-all duration-700 delay-400 ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"}`}>
           <span className="relative flex h-3 w-3">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75" style={{ backgroundColor: 'hsl(142 71% 45%)' }}></span>
+            <span className="relative inline-flex rounded-full h-3 w-3" style={{ backgroundColor: 'hsl(142 71% 45%)' }}></span>
           </span>
           <span className="text-foreground text-sm font-semibold">ONLY <span className="text-primary">12</span> SLOTS REMAINING</span>
           <span className="text-xs text-muted-foreground">· LIVE AVAILABILITY</span>
