@@ -1,5 +1,6 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Award, Clock, DollarSign } from "lucide-react";
+import markProfile from "@/assets/mark-profile.svg";
 
 const ArchitectSection = () => {
   const { ref, isVisible } = useScrollAnimation();
