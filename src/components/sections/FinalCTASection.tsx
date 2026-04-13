@@ -31,7 +31,7 @@ const FinalCTASection = () => {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full" style={{ background: 'radial-gradient(circle, rgba(120, 40, 200, 0.08) 0%, transparent 70%)' }} />
 
       <div className="relative z-10 container mx-auto px-4 sm:px-6 text-center max-w-3xl">
-        <div className={`inline-flex items-center gap-2 bg-destructive/15 border border-destructive/30 rounded-full px-5 py-2 mb-10 transition-all duration-700 ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"}`}>
+        <div className={`inline-flex items-center gap-2 bg-destructive/15 border border-destructive/30 rounded-full px-5 py-2 mb-10 animate-badge-glow transition-all duration-700 ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"}`}>
           <span className="w-2 h-2 rounded-full bg-primary" />
           <span className="text-destructive text-xs font-bold tracking-[0.2em] uppercase font-heading">Critical Ultimatum</span>
         </div>
@@ -64,7 +64,7 @@ const FinalCTASection = () => {
         </div>
 
         <div className={`flex flex-wrap items-center justify-center gap-3 mb-6 transition-all duration-700 delay-500 ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"}`}>
-          <span className="bg-destructive/20 border border-destructive/40 rounded-full px-5 py-2 text-destructive text-xs font-bold tracking-[0.15em] uppercase font-heading">
+          <span className="bg-destructive/20 border border-destructive/40 rounded-full px-5 py-2 text-destructive text-xs font-bold tracking-[0.15em] uppercase font-heading animate-badge-glow">
             Only 12 Slots Remaining
           </span>
           <span className="flex items-center gap-2">
