@@ -8,7 +8,7 @@ const SectionCTA = ({ label }: SectionCTAProps) => {
   };
 
   return (
-    <div className="relative py-6 flex justify-center" style={{ background: 'transparent' }}>
+    <div className="relative py-6 flex justify-center">
       <button
         onClick={scrollToTop}
         className="group relative font-heading text-xs sm:text-sm uppercase tracking-[0.25em] font-bold px-8 sm:px-12 py-3.5 rounded-full transition-all duration-500 hover:scale-105 active:scale-95 animate-pulse-glow"
