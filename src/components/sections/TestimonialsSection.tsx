@@ -32,45 +32,57 @@ const TestimonialsSection = () => {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section className="py-24 relative" ref={ref}>
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/3 to-background" />
+    <section
+      className="relative py-28 overflow-hidden"
+      ref={ref}
+      style={{ background: 'linear-gradient(180deg, #140a28 0%, #1a0e35 50%, #140a28 100%)' }}
+    >
+      {/* Ambient glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] rounded-full" style={{ background: 'radial-gradient(ellipse, rgba(245, 197, 24, 0.03) 0%, transparent 70%)' }} />
+
       <div className="relative z-10 container mx-auto px-4 sm:px-6">
         <div className="text-center mb-16">
-          <p className="text-secondary font-heading text-sm tracking-[0.3em] uppercase mb-3">SOCIAL PROOF</p>
-          <h2 className={`font-heading text-4xl sm:text-5xl font-bold text-foreground uppercase transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-            VOICES OF THE <span className="text-gradient-gold">REVOLUTION</span>
+          <p className={`text-[#b87aff] font-heading text-xs tracking-[0.35em] uppercase mb-4 transition-all duration-500 ${isVisible ? "opacity-100" : "opacity-0"}`}>Social Proof</p>
+          <h2 className={`font-heading text-4xl sm:text-5xl lg:text-6xl font-bold uppercase leading-tight transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
+            <span className="text-foreground">VOICES OF THE </span>
+            <span className="bg-gradient-to-r from-[#f5c518] to-[#ffdf6b] bg-clip-text text-transparent">REVOLUTION</span>
           </h2>
+          <div className="w-10 h-1 bg-primary mx-auto mt-6 rounded-full" style={{ boxShadow: '0 0 15px rgba(245, 197, 24, 0.4)' }} />
         </div>
 
         <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {testimonials.map((t, i) => (
             <div
               key={i}
-              className={`glass-card p-6 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+              className={`transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
               style={{ transitionDelay: `${200 + i * 150}ms` }}
             >
-              <div className="flex gap-1 mb-4">
-                {[...Array(t.rating)].map((_, j) => (
-                  <Star key={j} className="w-4 h-4 fill-primary text-primary" />
-                ))}
-              </div>
-              <p className="text-foreground text-sm leading-relaxed mb-6">
-                "{t.quote.split(t.highlight).map((part, idx) => (
-                  <span key={idx}>
-                    {part}
-                    {idx < t.quote.split(t.highlight).length - 1 && (
-                      <span className="text-primary font-bold">{t.highlight}</span>
-                    )}
-                  </span>
-                ))}"
-              </p>
-              <div className="flex items-center gap-3 pt-4 border-t border-border/50">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-secondary to-primary flex items-center justify-center text-xs font-bold text-primary-foreground">
-                  {t.initials}
-                </div>
-                <div>
-                  <p className="text-foreground font-semibold text-sm">{t.name}</p>
-                  <p className="text-muted-foreground text-xs">{t.location}</p>
+              <div className="rounded-2xl p-[1px] h-full" style={{ background: 'linear-gradient(145deg, rgba(124, 58, 237, 0.4), rgba(124, 58, 237, 0.08))' }}>
+                <div className="rounded-2xl p-6 h-full flex flex-col" style={{ background: 'linear-gradient(145deg, rgba(30, 16, 64, 0.6), rgba(15, 8, 35, 0.8))' }}>
+                  <div className="flex gap-1 mb-4">
+                    {[...Array(t.rating)].map((_, j) => (
+                      <Star key={j} className="w-4 h-4 fill-primary text-primary" style={{ filter: 'drop-shadow(0 0 4px rgba(245, 197, 24, 0.4))' }} />
+                    ))}
+                  </div>
+                  <p className="text-foreground/90 text-sm leading-relaxed mb-6 flex-1">
+                    "{t.quote.split(t.highlight).map((part, idx) => (
+                      <span key={idx}>
+                        {part}
+                        {idx < t.quote.split(t.highlight).length - 1 && (
+                          <span className="font-bold bg-gradient-to-r from-[#f5c518] to-[#ffdf6b] bg-clip-text text-transparent">{t.highlight}</span>
+                        )}
+                      </span>
+                    ))}"
+                  </p>
+                  <div className="flex items-center gap-3 pt-4 border-t border-[#3a2060]/40">
+                    <div className="w-10 h-10 rounded-full flex items-center justify-center text-xs font-bold text-primary-foreground" style={{ background: 'linear-gradient(135deg, #7c3aed, #f5c518)' }}>
+                      {t.initials}
+                    </div>
+                    <div>
+                      <p className="text-foreground font-semibold text-sm">{t.name}</p>
+                      <p className="text-[#9a8cb0] text-xs">{t.location}</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
