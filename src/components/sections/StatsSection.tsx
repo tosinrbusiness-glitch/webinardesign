@@ -4,21 +4,21 @@ import { DollarSign, Home, TrendingUp } from "lucide-react";
 const stats = [
   {
     icon: DollarSign,
-    value: "$3.4M+",
-    label: "GRANTS UNLOCKED",
-    description: "Elite funding secured for families who thought they couldn't afford a home.",
+    value: "Under $3,500",
+    label: "OUT OF POCKET",
+    description: "Buyers in Philly are getting into homes with low out-of-pocket costs — sometimes under $3,500 — using the right strategy.",
   },
   {
     icon: Home,
     value: "4,500+",
-    label: "FAMILIES HOUSED",
-    description: "From lifelong renters to sovereign owners across every Philadelphia district.",
+    label: "FAMILIES MOVED",
+    description: "Thousands of Philadelphia residents have stopped renting and started building generational wealth through homeownership.",
   },
   {
     icon: TrendingUp,
-    value: "75%",
-    label: "WEALTH GROWTH",
-    description: "The average equity gain for our members within their first 24 months of ownership.",
+    value: "40X",
+    label: "MORE WEALTH",
+    description: "Homeowners build 40X more wealth than renters. Every month you own is a month you're building equity — not burning cash.",
   },
 ];
 
@@ -36,7 +36,7 @@ const StatsSection = () => {
       <div className="container mx-auto px-4 sm:px-6">
         <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <p className="text-primary font-heading text-xs tracking-[0.35em] uppercase mb-4">
-            Proven Results
+            This Webinar Shows You How To Move
           </p>
           <h2 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold uppercase leading-tight">
             <span className="text-foreground">THE </span>
@@ -60,7 +60,7 @@ const StatsSection = () => {
                   <div className="w-14 h-14 rounded-xl bg-[#1a1a2e] flex items-center justify-center mx-auto mb-5">
                     <stat.icon className="w-6 h-6 text-primary" />
                   </div>
-                  <p className="font-heading text-4xl sm:text-5xl font-bold text-[#1a1a2e] mb-1">
+                  <p className="font-heading text-3xl sm:text-4xl font-bold text-[#1a1a2e] mb-1">
                     {stat.value}
                   </p>
                   <p className="font-heading text-sm tracking-[0.15em] text-[#1a1a2e] font-bold uppercase mb-3">
