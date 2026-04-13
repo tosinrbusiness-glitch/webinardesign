@@ -1,24 +1,24 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { DollarSign, Home, TrendingUp } from "lucide-react";
+import { Wallet, Home, TrendingUp } from "lucide-react";
 
 const stats = [
   {
-    icon: DollarSign,
-    value: "Under $3,500",
-    label: "OUT OF POCKET",
-    description: "Buyers in Philly are getting into homes with low out-of-pocket costs — sometimes under $3,500 — using the right strategy.",
+    icon: Wallet,
+    value: "$3.4M+",
+    label: "GRANTS UNLOCKED",
+    description: "Elite funding secured for families who thought they couldn't afford a home.",
   },
   {
     icon: Home,
     value: "4,500+",
-    label: "FAMILIES MOVED",
-    description: "Thousands of Philadelphia residents have stopped renting and started building generational wealth through homeownership.",
+    label: "FAMILIES HOUSED",
+    description: "From lifelong renters to sovereign owners across every Philadelphia district.",
   },
   {
     icon: TrendingUp,
-    value: "40X",
-    label: "MORE WEALTH",
-    description: "Homeowners build 40X more wealth than renters. Every month you own is a month you're building equity — not burning cash.",
+    value: "75%",
+    label: "WEALTH GROWTH",
+    description: "The average equity gain for our members within their first 24 months of ownership.",
   },
 ];
 
@@ -40,7 +40,7 @@ const StatsSection = () => {
           </p>
           <h2 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold uppercase leading-tight">
             <span className="text-foreground">THE </span>
-            <span className="bg-gradient-to-b from-[#b87aff] to-[#7c3aed] bg-clip-text text-transparent">POWER </span>
+            <span className="bg-gradient-to-b from-secondary to-accent bg-clip-text text-transparent">POWER </span>
             <span className="text-foreground">OF</span>
             <br />
             <span className="text-foreground">POSSESSION</span>
@@ -55,18 +55,34 @@ const StatsSection = () => {
               className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
               style={{ transitionDelay: `${(index + 1) * 200}ms` }}
             >
-              <div className="rounded-2xl p-[2px]" style={{ background: 'linear-gradient(145deg, #7c3aed, #5b21b6, #7c3aed)' }}>
-                <div className="bg-white rounded-2xl p-8 h-full text-center">
-                  <div className="w-14 h-14 rounded-xl bg-[#1a1a2e] flex items-center justify-center mx-auto mb-5">
+              <div
+                className="relative rounded-2xl p-[2px] group"
+                style={{
+                  background: 'linear-gradient(145deg, hsl(263 83% 57%), hsl(263 83% 40%), hsl(263 83% 57%))',
+                  boxShadow: '0 0 25px hsl(263 83% 57% / 0.3), 0 0 50px hsl(263 83% 57% / 0.15)',
+                }}
+              >
+                <div
+                  className="rounded-2xl p-8 h-full text-center"
+                  style={{ background: 'linear-gradient(180deg, #1a0e35 0%, #0d0520 100%)' }}
+                >
+                  <div
+                    className="w-14 h-14 rounded-xl flex items-center justify-center mx-auto mb-5"
+                    style={{
+                      background: 'linear-gradient(145deg, #1a1a2e, #0d0d1a)',
+                      border: '1px solid hsl(263 83% 57% / 0.3)',
+                      boxShadow: '0 0 15px hsl(263 83% 57% / 0.15)',
+                    }}
+                  >
                     <stat.icon className="w-6 h-6 text-primary" />
                   </div>
-                  <p className="font-heading text-3xl sm:text-4xl font-bold text-[#1a1a2e] mb-1">
+                  <p className="font-heading text-3xl sm:text-4xl font-bold text-foreground mb-1">
                     {stat.value}
                   </p>
-                  <p className="font-heading text-sm tracking-[0.15em] text-[#1a1a2e] font-bold uppercase mb-3">
+                  <p className="font-heading text-sm tracking-[0.15em] text-foreground font-bold uppercase mb-3">
                     {stat.label}
                   </p>
-                  <p className="text-[#5a5a6e] text-sm leading-relaxed">
+                  <p className="text-muted-foreground text-sm leading-relaxed">
                     {stat.description}
                   </p>
                 </div>
