@@ -6,19 +6,19 @@ const stats = [
     icon: Wallet,
     value: "$3.4M+",
     label: "GRANTS UNLOCKED",
-    description: "Elite funding secured for families who thought they couldn't afford a home.",
+    description: "Grant funding secured for families who thought they couldn't afford a home.",
   },
   {
     icon: Home,
     value: "4,500+",
     label: "FAMILIES HOUSED",
-    description: "From lifelong renters to sovereign owners across every Philadelphia district.",
+    description: "From lifelong renters to Proud owners across Philadelphia district.",
   },
   {
     icon: TrendingUp,
     value: "75%",
     label: "WEALTH GROWTH",
-    description: "The average equity gain for our members within their first 24 months of ownership.",
+    description: "Became Homeowners for less than $3500.",
   },
 ];
 
