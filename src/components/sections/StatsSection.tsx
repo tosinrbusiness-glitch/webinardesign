@@ -17,7 +17,7 @@ const stats = [
   {
     icon: TrendingUp,
     value: "75%",
-    label: "WEALTH GROWTH",
+    label: "BUYERS",
     description: "Became Homeowners for less than $3500.",
   },
 ];
