@@ -1,5 +1,6 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Shield, ArrowUp } from "lucide-react";
+import CountdownTimer from "@/components/CountdownTimer";
 
 const FinalCTASection = () => {
   const { ref, isVisible } = useScrollAnimation();
