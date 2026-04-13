@@ -48,7 +48,7 @@ const StatsSection = () => {
           <div className="w-10 h-1 bg-secondary mx-auto mt-6 rounded-full" />
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {stats.map((stat, index) => (
             <div
               key={index}
@@ -62,7 +62,6 @@ const StatsSection = () => {
                   boxShadow: '0 0 25px hsl(263 83% 57% / 0.35), 0 0 50px hsl(263 83% 57% / 0.15)',
                 }}
               >
-                {/* Hover glow overlay */}
                 <div
                   className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
                   style={{
@@ -70,26 +69,26 @@ const StatsSection = () => {
                   }}
                 />
                 <div
-                  className="relative rounded-3xl px-6 py-10 h-full flex flex-col items-center text-center"
+                  className="relative rounded-3xl px-8 py-12 h-full flex flex-col items-center text-center"
                   style={{ background: '#0f0a1e' }}
                 >
                   <div
-                    className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 transition-all duration-500 group-hover:scale-110"
+                    className="w-16 h-16 rounded-2xl flex items-center justify-center mb-8 transition-all duration-500 group-hover:scale-110"
                     style={{
                       background: '#111020',
                       border: '2px solid hsl(47 92% 52% / 0.4)',
                       boxShadow: '0 0 15px hsl(47 92% 52% / 0.15)',
                     }}
                   >
-                    <stat.icon className="w-5 h-5 text-primary" />
+                    <stat.icon className="w-6 h-6 text-primary" />
                   </div>
-                  <p className="font-heading text-4xl sm:text-5xl font-bold text-foreground mb-2">
+                  <p className="font-heading text-5xl sm:text-6xl font-bold text-foreground mb-3">
                     {stat.value}
                   </p>
-                  <p className="font-heading text-[11px] tracking-[0.2em] text-foreground/80 font-bold uppercase mb-4">
+                  <p className="font-heading text-xs tracking-[0.25em] text-foreground/80 font-bold uppercase mb-5">
                     {stat.label}
                   </p>
-                  <p className="text-muted-foreground text-xs leading-relaxed max-w-[200px]">
+                  <p className="text-muted-foreground text-sm leading-relaxed max-w-[240px]">
                     {stat.description}
                   </p>
                 </div>
