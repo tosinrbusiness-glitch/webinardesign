@@ -1,5 +1,6 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Award, Clock, DollarSign } from "lucide-react";
+import markProfile from "@/assets/mark-profile.svg";
 
 const ArchitectSection = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -19,12 +20,20 @@ const ArchitectSection = () => {
             <div className="relative">
               <div className="rounded-2xl p-[1px]" style={{ background: 'linear-gradient(145deg, rgba(124, 58, 237, 0.5), rgba(245, 197, 24, 0.2), rgba(124, 58, 237, 0.3))' }}>
                 <div className="w-full aspect-[3/4] rounded-2xl flex items-center justify-center overflow-hidden" style={{ background: 'linear-gradient(145deg, rgba(30, 16, 64, 0.8), rgba(20, 10, 45, 0.9))' }}>
-                  <div className="text-center p-8">
-                    <div className="w-32 h-32 rounded-full mx-auto mb-4 flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #7c3aed, #f5c518)' }}>
-                      <span className="font-heading text-4xl font-bold text-primary-foreground">MW</span>
-                    </div>
-                    <p className="text-[#9a8cb0] text-sm">Mark Wilson</p>
-                  </div>
+                  <img 
+                    src={markProfile} 
+                    alt="Mark Wilson" 
+                    className="w-full h-full object-cover rounded-2xl transition-all duration-500 ease-out grayscale hover:grayscale-0 hover:scale-105 hover:-translate-y-1"
+                    style={{ filter: 'grayscale(100%)', transition: 'filter 0.5s ease, transform 0.5s ease, box-shadow 0.5s ease' }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.filter = 'grayscale(0%) drop-shadow(0 20px 30px rgba(124, 58, 237, 0.4))';
+                      e.currentTarget.style.transform = 'scale(1.05) translateY(-4px)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.filter = 'grayscale(100%)';
+                      e.currentTarget.style.transform = 'scale(1) translateY(0)';
+                    }}
+                  />
                 </div>
               </div>
               <div className="absolute bottom-6 left-6 right-6 rounded-xl p-4 text-center" style={{ background: 'linear-gradient(135deg, #f5c518, #e8a900)', boxShadow: '0 0 30px rgba(245, 197, 24, 0.3)' }}>
