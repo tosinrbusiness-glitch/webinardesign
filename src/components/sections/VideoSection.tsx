@@ -21,7 +21,7 @@ const VideoSection = () => {
             <span className="bg-gradient-to-r from-[#f5c518] to-[#ffdf6b] bg-clip-text text-transparent">REALITY</span>
           </h2>
           <p className="text-[#9a8cb0] text-sm uppercase tracking-[0.25em] font-heading mb-10">
-            Watch a transformation in real-time
+            Live with Philadelphia's #1 Mortgage Banker
           </p>
 
           {/* Video Player */}
@@ -70,7 +70,7 @@ const VideoSection = () => {
                   >
                     <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
                     <span className="text-xs sm:text-sm font-heading text-white uppercase tracking-wider">
-                      Success Story: $14K Grant Closing
+                      Don't Rent another year |  Buy now!!
                     </span>
                   </div>
                 </button>
