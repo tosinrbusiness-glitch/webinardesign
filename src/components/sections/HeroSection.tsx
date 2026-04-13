@@ -84,7 +84,7 @@ const HeroSection = () => {
                   <input type="tel" placeholder="(215) 000-0000" className="w-full bg-[#1a0e30]/60 border border-[#3a2060]/50 rounded-xl px-4 py-3.5 text-sm text-foreground placeholder:text-[#5a4a70] placeholder:uppercase placeholder:tracking-wider placeholder:text-xs focus:outline-none focus:border-secondary/50 transition-all" value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: e.target.value })} />
                 </div>
                 <button className="w-full font-heading text-base uppercase tracking-wider py-4 rounded-xl transition-all font-bold text-[#1a1a2e] hover:scale-[1.02]" style={{ background: 'linear-gradient(135deg, #f5c518 0%, #c9a000 50%, #b87aff 100%)', boxShadow: '0 0 25px rgba(245, 197, 24, 0.25)' }}>
-                  🔒 Secure My Spot Now
+                  🔒 Secure Your Spot Now
                 </button>
               </div>
 
