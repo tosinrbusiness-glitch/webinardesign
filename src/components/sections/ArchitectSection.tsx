@@ -21,9 +21,9 @@ const ArchitectSection = () => {
                 <div className="w-full aspect-[3/4] rounded-2xl flex items-center justify-center overflow-hidden" style={{ background: 'linear-gradient(145deg, rgba(30, 16, 64, 0.8), rgba(20, 10, 45, 0.9))' }}>
                   <div className="text-center p-8">
                     <div className="w-32 h-32 rounded-full mx-auto mb-4 flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #7c3aed, #f5c518)' }}>
-                      <span className="font-heading text-4xl font-bold text-primary-foreground">PB</span>
+                      <span className="font-heading text-4xl font-bold text-primary-foreground">MW</span>
                     </div>
-                    <p className="text-[#9a8cb0] text-sm">Your Host</p>
+                    <p className="text-[#9a8cb0] text-sm">Mark Wilson</p>
                   </div>
                 </div>
               </div>
