@@ -1,7 +1,8 @@
 import { useState } from "react";
+import CountdownTimer from "@/components/CountdownTimer";
 
 const HeroSection = () => {
-  const [formData, setFormData] = useState({ name: "", email: "" });
+  const [formData, setFormData] = useState({ name: "", email: "", phone: "" });
 
   return (
     <section className="relative min-h-screen overflow-hidden" style={{ background: 'linear-gradient(135deg, #2d0a3e 0%, #1a0630 30%, #120425 60%, #0d0218 100%)' }}>
@@ -23,7 +24,6 @@ const HeroSection = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 items-center pt-8 pb-20 lg:pt-12 lg:pb-32">
           <div className="space-y-8 animate-slide-in-left">
-            {/* Urgency badge */}
             <div className="inline-flex items-center gap-2 bg-destructive/15 border border-destructive/30 rounded-full px-4 py-1.5">
               <span className="w-2 h-2 rounded-full bg-destructive animate-pulse" />
               <span className="text-destructive text-xs font-bold tracking-wider uppercase font-heading">🚨 Limited Spots — Register Now</span>
@@ -52,12 +52,8 @@ const HeroSection = () => {
                 </div>
               </div>
               <div>
-                <p className="text-foreground font-heading text-xs tracking-wider uppercase">
-                  JOIN 4,500+ PHILLY RESIDENTS
-                </p>
-                <p className="text-[#9a8cb0] text-xs uppercase tracking-wider">
-                  WHO STOPPED RENTING & STARTED OWNING.
-                </p>
+                <p className="text-foreground font-heading text-xs tracking-wider uppercase">JOIN 4,500+ PHILLY RESIDENTS</p>
+                <p className="text-[#9a8cb0] text-xs uppercase tracking-wider">WHO STOPPED RENTING & STARTED OWNING.</p>
               </div>
             </div>
           </div>
@@ -67,23 +63,32 @@ const HeroSection = () => {
               <h3 className="font-heading text-2xl font-bold text-foreground uppercase tracking-wide mb-2">
                 Quit Funding<br />Landlords
               </h3>
-              <p className="text-[#9a8cb0] text-xs mb-6 font-heading tracking-wider uppercase">Free live webinar · Limited seats</p>
+              <p className="text-[#9a8cb0] text-xs mb-5 font-heading tracking-wider uppercase">Free live webinar · Limited seats</p>
 
-              <div className="space-y-5">
+              {/* Countdown */}
+              <div className="mb-6">
+                <CountdownTimer compact />
+              </div>
+
+              <div className="space-y-4">
                 <div>
-                  <label className="text-[11px] text-[#9a8cb0] uppercase tracking-[0.25em] mb-2.5 block font-heading">Full Name</label>
-                  <input type="text" placeholder="ENTER YOUR NAME" className="w-full bg-[#1a0e30]/60 border border-[#3a2060]/50 rounded-xl px-4 py-4 text-sm text-foreground placeholder:text-[#5a4a70] placeholder:uppercase placeholder:tracking-wider placeholder:text-xs focus:outline-none focus:border-secondary/50 transition-all" value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} />
+                  <label className="text-[11px] text-[#9a8cb0] uppercase tracking-[0.25em] mb-2 block font-heading">Full Name</label>
+                  <input type="text" placeholder="ENTER YOUR NAME" className="w-full bg-[#1a0e30]/60 border border-[#3a2060]/50 rounded-xl px-4 py-3.5 text-sm text-foreground placeholder:text-[#5a4a70] placeholder:uppercase placeholder:tracking-wider placeholder:text-xs focus:outline-none focus:border-secondary/50 transition-all" value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} />
                 </div>
                 <div>
-                  <label className="text-[11px] text-[#9a8cb0] uppercase tracking-[0.25em] mb-2.5 block font-heading">Email Address</label>
-                  <input type="email" placeholder="YOUR@EMAIL.COM" className="w-full bg-[#1a0e30]/60 border border-[#3a2060]/50 rounded-xl px-4 py-4 text-sm text-foreground placeholder:text-[#5a4a70] placeholder:uppercase placeholder:tracking-wider placeholder:text-xs focus:outline-none focus:border-secondary/50 transition-all" value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} />
+                  <label className="text-[11px] text-[#9a8cb0] uppercase tracking-[0.25em] mb-2 block font-heading">Email Address</label>
+                  <input type="email" placeholder="YOUR@EMAIL.COM" className="w-full bg-[#1a0e30]/60 border border-[#3a2060]/50 rounded-xl px-4 py-3.5 text-sm text-foreground placeholder:text-[#5a4a70] placeholder:uppercase placeholder:tracking-wider placeholder:text-xs focus:outline-none focus:border-secondary/50 transition-all" value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} />
+                </div>
+                <div>
+                  <label className="text-[11px] text-[#9a8cb0] uppercase tracking-[0.25em] mb-2 block font-heading">Phone Number</label>
+                  <input type="tel" placeholder="(215) 000-0000" className="w-full bg-[#1a0e30]/60 border border-[#3a2060]/50 rounded-xl px-4 py-3.5 text-sm text-foreground placeholder:text-[#5a4a70] placeholder:uppercase placeholder:tracking-wider placeholder:text-xs focus:outline-none focus:border-secondary/50 transition-all" value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: e.target.value })} />
                 </div>
                 <button className="w-full font-heading text-base uppercase tracking-wider py-4 rounded-xl transition-all font-bold text-[#1a1a2e] hover:scale-[1.02]" style={{ background: 'linear-gradient(135deg, #f5c518 0%, #c9a000 50%, #b87aff 100%)', boxShadow: '0 0 25px rgba(245, 197, 24, 0.25)' }}>
                   🔒 Secure My Spot Now
                 </button>
               </div>
 
-              <div className="flex items-center justify-center gap-2 mt-5">
+              <div className="flex items-center justify-center gap-2 mt-4">
                 <span className="w-2 h-2 rounded-full bg-destructive animate-pulse" />
                 <p className="text-[10px] text-destructive/80 uppercase tracking-wider font-heading font-bold">Only 12 Spots Left For This Session</p>
               </div>

@@ -1,5 +1,6 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Shield, ArrowUp } from "lucide-react";
+import CountdownTimer from "@/components/CountdownTimer";
 
 const FinalCTASection = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -50,6 +51,11 @@ const FinalCTASection = () => {
         <p className={`text-[#9a8cb0] text-sm sm:text-base max-w-xl mx-auto mb-10 leading-relaxed uppercase tracking-wide font-heading transition-all duration-700 delay-300 ${isVisible ? "opacity-100" : "opacity-0"}`}>
           This webinar is for you. Register NOW.<br />Secure your spot. Change your position.
         </p>
+
+        {/* Countdown */}
+        <div className={`mb-10 transition-all duration-700 delay-350 ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"}`}>
+          <CountdownTimer />
+        </div>
 
         <div className={`mb-8 transition-all duration-700 delay-400 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
           <button className="px-12 py-5 rounded-full font-heading text-lg uppercase tracking-wider font-bold text-[#1a1a2e] transition-all hover:scale-105 animate-pulse-glow" style={{ background: 'linear-gradient(135deg, #f5c518 0%, #e8b800 100%)', boxShadow: '0 0 30px rgba(245, 197, 24, 0.3), 0 0 60px rgba(245, 197, 24, 0.1)' }}>
