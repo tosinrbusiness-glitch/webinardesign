@@ -56,40 +56,40 @@ const StatsSection = () => {
               style={{ transitionDelay: `${(index + 1) * 200}ms` }}
             >
               <div
-                className="relative rounded-2xl p-[2px] group transition-all duration-500 hover:-translate-y-2 cursor-pointer"
+                className="relative rounded-3xl p-[3px] group transition-all duration-500 hover:-translate-y-2 cursor-pointer"
                 style={{
-                  background: 'linear-gradient(160deg, hsl(263 83% 60%), hsl(263 83% 45%), hsl(263 83% 60%))',
-                  boxShadow: '0 0 20px hsl(263 83% 57% / 0.25), 0 0 40px hsl(263 83% 57% / 0.1)',
+                  background: 'linear-gradient(180deg, hsl(263 83% 65%), hsl(263 83% 50%), hsl(263 83% 65%))',
+                  boxShadow: '0 0 25px hsl(263 83% 57% / 0.35), 0 0 50px hsl(263 83% 57% / 0.15)',
                 }}
               >
                 {/* Hover glow overlay */}
                 <div
-                  className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+                  className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
                   style={{
-                    boxShadow: '0 0 35px hsl(263 83% 57% / 0.5), 0 0 70px hsl(263 83% 57% / 0.25), 0 8px 30px rgba(0,0,0,0.3)',
+                    boxShadow: '0 0 40px hsl(263 83% 57% / 0.6), 0 0 80px hsl(263 83% 57% / 0.3), 0 10px 40px rgba(0,0,0,0.4)',
                   }}
                 />
                 <div
-                  className="relative rounded-2xl p-7 h-full flex flex-col items-center text-center"
-                  style={{ background: 'linear-gradient(180deg, #1e1040 0%, #120828 100%)' }}
+                  className="relative rounded-3xl px-6 py-10 h-full flex flex-col items-center text-center"
+                  style={{ background: '#0f0a1e' }}
                 >
                   <div
-                    className="w-12 h-12 rounded-xl flex items-center justify-center mb-5 transition-all duration-500 group-hover:scale-110"
+                    className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 transition-all duration-500 group-hover:scale-110"
                     style={{
-                      background: '#0d0d1a',
-                      border: '1px solid hsl(47 92% 52% / 0.3)',
-                      boxShadow: '0 0 12px hsl(47 92% 52% / 0.1)',
+                      background: '#111020',
+                      border: '2px solid hsl(47 92% 52% / 0.4)',
+                      boxShadow: '0 0 15px hsl(47 92% 52% / 0.15)',
                     }}
                   >
                     <stat.icon className="w-5 h-5 text-primary" />
                   </div>
-                  <p className="font-heading text-3xl sm:text-4xl font-bold text-foreground mb-1.5">
+                  <p className="font-heading text-4xl sm:text-5xl font-bold text-foreground mb-2">
                     {stat.value}
                   </p>
-                  <p className="font-heading text-[11px] tracking-[0.2em] text-foreground/90 font-bold uppercase mb-3">
+                  <p className="font-heading text-[11px] tracking-[0.2em] text-foreground/80 font-bold uppercase mb-4">
                     {stat.label}
                   </p>
-                  <p className="text-muted-foreground text-xs leading-relaxed">
+                  <p className="text-muted-foreground text-xs leading-relaxed max-w-[200px]">
                     {stat.description}
                   </p>
                 </div>
