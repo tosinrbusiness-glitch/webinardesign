@@ -90,6 +90,13 @@
   .animate-badge-glow {
     animation: badge-glow 2s ease-in-out infinite;
   }
+  .animate-watermark-pulse {
+    animation: watermark-pulse 5s ease-in-out infinite;
+  }
+
+  .animate-watermark-pulse-delayed {
+    animation: watermark-pulse 4s ease-in-out infinite 1.5s;
+  }
 }
 
 @keyframes badge-glow {
@@ -100,5 +107,14 @@
   50% {
     box-shadow: 0 0 20px hsl(0 84% 60% / 0.5), 0 0 40px hsl(0 84% 60% / 0.25), 0 0 60px hsl(0 84% 60% / 0.1);
     border-color: hsl(0 84% 60% / 0.7);
+  }
+}
+
+@keyframes watermark-pulse {
+  0%, 100% {
+    opacity: 0.02;
+  }
+  50% {
+    opacity: 0.08;
   }
 }

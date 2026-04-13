@@ -17,12 +17,12 @@ const FinalCTASection = () => {
     >
       {/* Background watermarks */}
       <div className="absolute inset-0 flex items-center justify-center overflow-hidden pointer-events-none select-none">
-        <p className="font-heading text-[10rem] sm:text-[16rem] font-bold uppercase text-white/[0.02] leading-none tracking-tight whitespace-nowrap">
+        <p className="font-heading text-[10rem] sm:text-[16rem] font-bold uppercase text-white leading-none tracking-tight whitespace-nowrap animate-watermark-pulse">
           OWN IT
         </p>
       </div>
       <div className="absolute inset-0 flex items-start justify-center overflow-hidden pointer-events-none select-none pt-20">
-        <p className="font-heading text-[7rem] sm:text-[11rem] font-bold uppercase text-white/[0.015] leading-none tracking-tight whitespace-nowrap">
+        <p className="font-heading text-[7rem] sm:text-[11rem] font-bold uppercase text-white leading-none tracking-tight whitespace-nowrap animate-watermark-pulse-delayed">
           NO MORE RENT
         </p>
       </div>
