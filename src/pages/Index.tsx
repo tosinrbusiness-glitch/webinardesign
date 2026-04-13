@@ -4,6 +4,7 @@ import BrutalTruthSection from "@/components/sections/BrutalTruthSection";
 import CurriculumSection from "@/components/sections/CurriculumSection";
 import QualifierSection from "@/components/sections/QualifierSection";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
+import VideoSection from "@/components/sections/VideoSection";
 import ArchitectSection from "@/components/sections/ArchitectSection";
 import FinalCTASection from "@/components/sections/FinalCTASection";
 
@@ -16,6 +17,7 @@ const Index = () => {
       <CurriculumSection />
       <QualifierSection />
       <TestimonialsSection />
+      <VideoSection />
       <ArchitectSection />
       <FinalCTASection />
     </main>
