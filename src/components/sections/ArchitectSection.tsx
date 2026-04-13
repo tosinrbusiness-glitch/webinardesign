@@ -1,6 +1,6 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Award, Clock, DollarSign } from "lucide-react";
-import markProfile from "@/assets/mark-profile.svg";
+
 
 const ArchitectSection = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -21,7 +21,7 @@ const ArchitectSection = () => {
               <div className="rounded-2xl p-[1px]" style={{ background: 'linear-gradient(145deg, rgba(124, 58, 237, 0.5), rgba(245, 197, 24, 0.2), rgba(124, 58, 237, 0.3))' }}>
                 <div className="w-full aspect-[3/4] rounded-2xl flex items-center justify-center overflow-hidden" style={{ background: 'linear-gradient(145deg, rgba(30, 16, 64, 0.8), rgba(20, 10, 45, 0.9))' }}>
                   <img 
-                    src={markProfile} 
+                    src="/images/mark-profile.svg" 
                     alt="Mark Wilson" 
                     className="w-full h-full object-cover rounded-2xl transition-all duration-500 ease-out grayscale hover:grayscale-0 hover:scale-105 hover:-translate-y-1"
                     style={{ filter: 'grayscale(100%)', transition: 'filter 0.5s ease, transform 0.5s ease, box-shadow 0.5s ease' }}
