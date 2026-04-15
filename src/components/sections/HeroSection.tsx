@@ -92,6 +92,10 @@ const HeroSection = () => {
                 <span className="w-2 h-2 rounded-full bg-destructive animate-pulse" />
                 <p className="text-[10px] text-destructive/80 uppercase tracking-wider font-heading font-bold">Only 12 Spots Left For This Session</p>
               </div>
+
+              <p className="text-[9px] text-muted-foreground/60 text-center mt-4 leading-relaxed">
+                By providing your contact information and submitting this form, you expressly consent to receive recurring communications, including calls and text messages (including via autodialer), from our team regarding your inquiry and related services. Consent is not required as a condition of purchase. Message and data rates may apply.
+              </p>
             </div>
           </div>
         </div>
