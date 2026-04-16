@@ -30,9 +30,10 @@ const HeroSection = () => {
             </div>
 
             <h1 className="font-heading text-5xl sm:text-6xl lg:text-7xl xl:text-[5.5rem] font-bold leading-[0.95] uppercase">
+              <span className="text-foreground">LEARN HOW TO</span><br />
               <span className="text-foreground">BUY A HOME</span><br />
               <span className="text-foreground">IN PHILLY</span><br />
-              <span className="text-foreground">FOR UNDER</span><br />
+              <span className="text-foreground">FOR UNDER </span>
               <span className="bg-gradient-to-b from-[#f5c518] to-[#e8a900] bg-clip-text text-transparent" style={{ filter: 'drop-shadow(0 0 20px rgba(245, 197, 24, 0.3))' }}>$3,500.</span>
             </h1>
 
